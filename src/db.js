@@ -15,8 +15,8 @@ TierlistModel(sequelize);
 const { Player } = sequelize.models;
 const { Tierlist } = sequelize.models;
 
-// Aca vendrian las relaciones
-// Product.hasMany(Reviews);
+Tierlist.hasMany(Player);
+Player.belongsTo(Tierlist);
 
 module.exports = {
   ...sequelize.models,
